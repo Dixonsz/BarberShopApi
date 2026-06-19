@@ -1,0 +1,26 @@
+#Virtual Environment
+venv/
+.venv/
+
+#Python
+__pycache__/
+*.py[cod]
+
+#Django
+src/db.sqlite3
+src/staticfiles/
+src/media/
+
+#Environment Variables
+.env
+.env.*
+!.env.example
+
+#Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+#System Files
+.DS_Store
+Thumbs.db
