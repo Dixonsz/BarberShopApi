@@ -122,7 +122,7 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  
     },
     {
         "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
@@ -144,6 +144,8 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_PAGINATION_CLASS": "shared.api.pagination.StandardPagination",
     "PAGE_SIZE": 10,
+
+    "EXCEPTION_HANDLER": "shared.api.exception_handler.custom_exception_handler",
 }
 
 SIMPLE_JWT = {
