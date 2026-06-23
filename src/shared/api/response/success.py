@@ -17,3 +17,11 @@ class SuccessResponse:
             {"success": True, "message": message, "data": data, "meta": meta},
             status=status_code,
         )
+
+    @staticmethod
+    def created(*, data: Any = None, message: str = "Created") -> Response:
+        return SuccessResponse.success(
+            data=data,
+            message=message,
+            status_code=status.HTTP_201_CREATED,
+        )
